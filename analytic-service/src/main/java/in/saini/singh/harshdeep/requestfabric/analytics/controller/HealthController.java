@@ -12,18 +12,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/health")
 public class HealthController {
 
-    private String serviceName;
-    private String serviceDescription;
+    private final String serviceName;
+    private final String serviceDescription;
 
-    public HealthController(  @Value("${info.service.name}") String serviceName,
-                              @Value("${info.service.description}") String serviceDescription) {
-        this.serviceName = serviceName;
-        this.serviceDescription = serviceDescription;
+    public HealthController(@Value("${info.service.name}") String serviceName,
+                            @Value("${info.service.description}") String serviceDescription)
+    {
+        this.serviceName=serviceName;
+        this.serviceDescription=serviceDescription;
     }
+
 
     @GetMapping
     public ResponseEntity<HealthResponse> health(){
-return ResponseEntity.ok(new HealthResponse(serviceName,serviceDescription,"UP"));
+        return ResponseEntity.ok(new HealthResponse(serviceName,serviceDescription,"UP"));
     }
 
 }

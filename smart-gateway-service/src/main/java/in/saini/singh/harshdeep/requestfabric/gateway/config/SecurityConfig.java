@@ -10,8 +10,8 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
-        http.authorizeHttpRequests(authorize->authorize.
-                requestMatchers("/health").permitAll()
+        http.authorizeHttpRequests(authorize->authorize
+                .requestMatchers("/health").permitAll()
                 .anyRequest().authenticated()
         );
 

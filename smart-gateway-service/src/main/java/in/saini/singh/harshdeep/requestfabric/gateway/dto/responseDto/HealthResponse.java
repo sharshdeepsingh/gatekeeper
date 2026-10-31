@@ -1,6 +1,5 @@
 package in.saini.singh.harshdeep.requestfabric.gateway.dto.responseDto;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,5 +11,5 @@ public class HealthResponse {
 
     private String serviceName;
     private String serviceDescription;
-    private String appStatus;
+    private String status;
 }
