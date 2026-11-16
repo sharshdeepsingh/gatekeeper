@@ -1,9 +1,8 @@
-package in.saini.singh.harshdeep.requestfabric.management.dto.response;
+package in.saini.singh.harshdeep.requestfabric.management.dto.responseDto;
 
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
